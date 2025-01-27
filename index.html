@@ -10,13 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typewriter-effect/dist/core.js"></script>
 </head>
 
 <body>
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="msdg_logo.png" alt="Social Tech Consulting Logo">
+                <img src="msdg_logo.png" alt="Social Tech Consulting Logo" style="color: black;">
             </div>
             <nav class="nav-bar">
                 <ul>
@@ -31,12 +35,14 @@
     <main>
         <section class="middle-section">
             <div class="content-wrapper">
-                <div class="text-content">
-                    <h1>Social Change Through <span>Powerful Technology</span></h1>
-                    <p>
-                        We help organizations harness the power of technology to drive meaningful, lasting change. Partner with us to build
-                        innovative solutions that empower communities and businesses alike.
-                    </p>
+                <div class="overlay">
+                    <div class="text-content">
+                        <h1 class="social-change-caption">Social Change Through</h1>
+                        <h1 class="typing-caption" id="typewriter">Powerful Technology</h1>
+                        <div class="button-container">
+                            <button class="main-page-button">Learn More</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="right-content">
                     <!-- Space reserved for background image or other content -->
@@ -44,6 +50,22 @@
             </div>
         </section>
     </main>
+    <script>
+        var app = document.getElementById('typewriter');
+
+        var typewriter = new Typewriter(app, {
+            loop: true,
+            delay: 50
+        });
+
+        typewriter.typeString('Powerful Technology.')
+            .pauseFor(2000)
+            .deleteAll()
+            .typeString('Innovative Solutions.')
+            .pauseFor(2000)
+            .deleteAll()
+            .start();
+    </script>
 </body>
 
 </html>
